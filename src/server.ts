@@ -1,3 +1,10 @@
+// Architectural pattern: MVC, DI, MVP
+ 
+// MVC = Model view controller
+
+// Design pattern: Middleware, Decotar
+
+
 // console.log("EXUCUTED");
 
 // import moment from "moment";
@@ -7,4 +14,4 @@
 // console.log(currentTime);
 
 // const person: string = "Adam";
-// const count: number = 100;
+// const count: number = 100; 
