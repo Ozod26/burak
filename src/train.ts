@@ -1,12 +1,14 @@
-// function getPositive(arr: any[]) {
-//   let positiveNums = arr.filter((num: number) => num > 0);
-//   let result = positiveNums.length > 0 ? positiveNums.join('') : '';
-//   return result;
-// }
+// H-TASK: 
+// shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin
+// MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 
-// console.log(getPositive([1, -4, 2])); // Output: "12"
+function getPositive(arr) {
+  let positiveNums = arr.filter(num => num > 0);
+  let result = positiveNums.length > 0 ? positiveNums.join('') : '';
+  return result;
+}
 
-
+console.log(getPositive([1, -4, 2])); 
 
 // function getHighestIndex(arr) {
 //   if (!Array.isArray(arr) || arr.length === 0) {
