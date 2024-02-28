@@ -1,4 +1,10 @@
+// function getPositive(arr: any[]) {
+//   let positiveNums = arr.filter((num: number) => num > 0);
+//   let result = positiveNums.length > 0 ? positiveNums.join('') : '';
+//   return result;
+// }
 
+// console.log(getPositive([1, -4, 2])); // Output: "12"
 
 
 
