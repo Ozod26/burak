@@ -4,7 +4,7 @@
   - Naming standards:
      function, method, variable => CAMEL case (goHome)
      class => PASCALcase                      (MemberService)
-     folder => KEBAB case 
+     folder, file => KEBAB case 
      css => SNAKE case                         (button_style)
    
 
