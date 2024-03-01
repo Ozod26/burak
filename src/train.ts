@@ -1,13 +1,27 @@
+
+/* Project Standards:
+  - Logging standards:
+  - Naming standards:
+     function, method, variable => CAMEL case (goHome)
+     class => PASCALcase                      (MemberService)
+     folder => KEBAB case 
+     css => SNAKE case                         (button_style)
+   
+
+  - ERROR handling 
+*/
+
+
 // H-TASK: 
 // shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin
 // MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 
-function getPositive(arr: any[]) {
-  let positiveNums = arr.filter((num: number) => num >=0 );
-  let result = positiveNums.length > 0 ? positiveNums.join('') : '';
-  return result;
-}
-console.log(getPositive([7, -8, 0, 5, 1]));
+// function getPositive(arr: any[]) {
+//   let positiveNums = arr.filter((num: number) => num >=0 );
+//   let result = positiveNums.length > 0 ? positiveNums.join('') : '';
+//   return result;
+// }
+// console.log(getPositive([7, -8, 0, 5, 1]));
 
 // function getHighestIndex(arr) {
 //   if (!Array.isArray(arr) || arr.length === 0) {
