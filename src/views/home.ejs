@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <link rel="stylesheet" type="text/css" href="/css/main.css" />
-  <script src="/js/main.js"></script>
-</head>
+<%- include('includes/header') %>
 <body>
-  <div class="format1">TEST</div>
+  <div class="card" style="width: 18rem">
+    <img
+      src="https://img.freepik.com/free-photo/beautiful-landmark-fuji-mountain-chureito-pagoda-sunset-japan_335224-13.jpg?w=1380&t=st=1709577071~exp=1709577671~hmac=0c40c93c573f902084b02609a29390a29b70b0f582fdda3e01d6c9a9392ea9a4"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
 </body>
-</html>
+<%- include(`includes/footer`) %>
