@@ -1,3 +1,18 @@
+/** K-TASK: 
+
+Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
+MASALAN: countVowels("string") return 1;
+
+*/
+
+function countVowels(str: string) {
+  let vowels = str.toLowerCase().replace(/[^aeiou]/g, '');
+
+  // Unli harfni sonini hisoblash
+  return vowels.length;
+}
+console.log(countVowels("AsmoXonim")); 
+
 
 /** J-TASK: 
 

@@ -46,13 +46,14 @@ restaurantController.processSignup = async (
   ) => {
    try {
     console.log("processSignup")
- 
+
+    /* kirib kelayotgan request body ni newMember 
+    constantasiga tenglab olyabmiz va uning type MemberInput interface */ 
     const newMember: MemberInput = req.body;
     newMember.memberType = MemberType.RESTAURANT;
     const result = await memberService.processSignup(newMember);
+
     // SESSIONS AUTHENTICATION
-
-
     req.session.member = result;
     req.session.save(function () {
       res.send(result);
@@ -75,8 +76,13 @@ restaurantController.processLogin = async (
   try {
     console.log("processLogin");
 
+    // input variable hosil qildik. va uni req.body kelayotgan malumotga tenglab oldik 
     const input: LoginInput = req.body;
-    const result = await memberService.processLogin(input);
+   
+    // memberservice objectiga restaurantControllerni processLogin methodini chaqirib 
+    // undan qaytgan malumotni result degan variable ga tenglashitirib olamz
+    const result = await memberService.processLogin(input); 
+
 
     req.session.member = result;
     req.session.save(function () {
@@ -84,9 +90,33 @@ restaurantController.processLogin = async (
     });
   } catch (err) {
     console.log("Error, processLogin:", err); 
-    res.send(err);
+    const message = 
+      err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
+    res.send(
+      `<script> alert("${message}"); window.location.replace('admin/login') </script>`
+    );
   }
 };
+
+
+restaurantController.logout = async (
+  req: AdminRequest, 
+  res: Response
+) => {
+  try {
+    console.log("logout");
+    req.session.destroy(function() {
+      res.redirect("/admin");
+    });
+    
+  } catch (err) {
+    console.log("Error, processLogin:", err); 
+    res.redirect("/admin");
+  }
+};
+
+
+
 
 
 restaurantController.checkAuthSession = async (
