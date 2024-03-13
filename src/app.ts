@@ -7,6 +7,7 @@ import { MORGAN_FORMAT } from "./libs/config";
 
 import session from "express-session";
 import ConnectMongoDB from "connect-mongodb-session";
+import { T } from "./libs/types/commom";
 
 // yangi vVeriable hosil qilamiz
 
@@ -31,7 +32,7 @@ app.use(
   session({
     secret: String(process.env.SESSION_SECRET), // 3-shaxsga korsatish mumkin emas
     cookie: { 
-      maxAge: 1000 * 3600 * 3, // 3 hours
+      maxAge: 1000 * 3600 * 6 // 6 hours
     },
     store: store,
     resave: true, // oxirgi kirgan vaqtdan 3 soat davomida. Kirilgan vaqtda ozini yangilaydi // 
@@ -39,11 +40,11 @@ app.use(
   })
 );
 
-// app.use(function (req, res, next) {
-//   const sessionInstance = req.session as T;
-//   res.locals.member = sessionInstance.member;
-//   next();
-// });
+app.use(function (req, res, next) {
+  const sessionInstance = req.session as T;
+  res.locals.member = sessionInstance.member;
+  next();
+});
 
 
 

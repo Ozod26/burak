@@ -9,6 +9,7 @@ export enum HttpCode {
   INTERNAL_SERVER_ERROR = 500,
 }
 
+
 export enum Message {
   SOMETHING_WENT_WRONG = "Somthing went wrong!",
   NO_DATA_FOUND = "No data is found!",
@@ -18,7 +19,8 @@ export enum Message {
   USED_NICK_PHONE = "You are inserting already used nick or phone!",
   NO_MEMBER_NICK = "No member with that member nick!",
   WRONG_PASSWORD = "wrong passwodr, please try again!",
-  NOT_AUTHENTICATED = "You are not authenticated, Please login first!"
+  NOT_AUTHENTICATED = "You are not authenticated, Please login first!",
+  NOT_ = "NOT_"
 }
 
 class Errors extends Error {

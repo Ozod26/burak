@@ -1,3 +1,43 @@
+/*L-TASK: 
+
+Shunday function yozing, u string qabul qilsin va string ichidagi hamma sozlarni chappasiga yozib va sozlar ketma-ketligini buzmasdan stringni qaytarsin.
+MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
+
+*/
+
+function reverseSentence(sentence: string) {
+  let words = sentence.split(' ');
+  let reversedWords = words.map((word: string) => {
+      return word.split('').reverse().join('');
+  });
+  return reversedWords.join(' ');
+}
+console.log(reverseSentence("we like coding!")); 
+
+
+/**
+ * session/cookies
+request join req oziga joylashvoladi 
+ self destroy ozini ozi
+ */
+/**  Frontend developmant
+ Tradition Frontend Developmet =>BSSR =>EJS Wramework
+ Modern Frontend Developent => SPA => REACT 
+*/
+
+/** 
+datalarni togri kiritiyotganini tekshireydigon valideshinlar 
+Validation:
+Frontend validation -> frontendda togri kiritilyotganini tekshirish validation 
+Backend validation -> Backend 
+Database validation -> 
+Burakda 3 ta validationdan foydalaniladi 
+/
+Pipe ->serverga kirish oraligidagi buni Pipelar bn amalga oshirishimiz mumkin 
+/
+*/
+
+
 /** K-TASK: 
 
 Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
@@ -5,13 +45,13 @@ MASALAN: countVowels("string") return 1;
 
 */
 
-function countVowels(str: string) {
-  let vowels = str.toLowerCase().replace(/[^aeiou]/g, '');
+// function countVowels(str: string) {
+//   let vowels = str.toLowerCase().replace(/[^aeiou]/g, '');
 
-  // Unli harfni sonini hisoblash
-  return vowels.length;
-}
-console.log(countVowels("AsmoXonim")); 
+//   // Unli harfni sonini hisoblash
+//   return vowels.length;
+// }
+// console.log(countVowels("AsmoXonim")); 
 
 
 /** J-TASK: 
